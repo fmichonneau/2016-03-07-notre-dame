@@ -11,7 +11,15 @@
   <head>
     <title>Data Carpentry: {{ page.venue }}</title>
     {% include header.html %}
+    <meta name="venue" content="{{page.venue}}" />
+    <meta name="date" content="{{page.humandate}}" />
+    <meta name="startdate" content="{{page.startdate}}" />
+    <meta name="enddate" content="{{page.enddate}}" />
+    {% if page.redirect %}
+    <meta http-equiv="refresh" content="0; url={{page.redirect}}" />
+    {% endif %}
   </head>
+
   <body class="workshop">
     {% include github-ribbon.html %}
     <div class="container card">
